@@ -1,0 +1,122 @@
+:root {
+    /*  Accent Colours */
+    --mainAccentColour: #da1f1f;
+    --mainAccentColourLight: rgb(229, 98, 98);
+    --mainAccentColourHover: rgba(219, 56, 56, 0.1);
+
+    /*  Background Colours */
+    --darkBackgroundColour: rgb(30, 30, 30);
+    --darkerBackgroundColour: rgb(10, 10, 10);
+    --lightBackgroundColour: rgb(245, 245, 245);
+    --lighterBackgroundColour: white;
+
+    /*  Borders */
+    --thinBorder: rgb(210, 210, 210);
+
+    /*  Text Colours */
+    --paragraphTextColour: rgb(119, 119, 119);
+    --paragraphTextColourDark: rgb(175, 175, 175);
+    --paragraphTextColourDarker: #c3c3c3;
+
+    /*  Text Sizes */
+    --paragraphTextSize: 0.9rem;
+
+    /*  Box Shadows */
+    --smallBoxShadow: inset 0 1px 2px #ffffff30, 0 1px 2px #00000030, 0 2px 4px #00000015;
+    --mediumBoxShadow: inset 0 1px 2px #ffffff50, 0 1px 2px #00000030, 0 2px 4px #00000015;
+    --largeBoxShadow: inset 0 1px 2px #ffffff70, 0 1px 2px #00000030, 0 2px 4px #00000015;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.p {
+    font-size: var(--paragraphTextSize);
+    font-weight: 350;
+    letter-spacing: 0.2px;
+    color: var(--paragraphTextColour);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button {
+    cursor: pointer;
+}
+
+/*  Common Classes */
+
+.title {
+   font-size: 1.25rem;
+   color: gray; 
+   font-weight: 400;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.image {
+   width: 50px;
+   height: 50px;
+   background-color: gray;
+   border-radius: 50%;
+   
+}
+.matches-list {
+   list-style: none;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+.matches-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.search-section-container {
+    padding: 0.75rem;
+}
+.search-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background-color: gray;
+    border-radius: 0.25rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: transparent;
+
+}
+
+.search-input::placeholder {
+  color: var(--darkBackgroundColour); /* Change to your desired color (e.g., 'red', '#ff0000') */
+  opacity: 1; /* Ensures full opacity in Firefox */
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--darkBackgroundColour);
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+}
