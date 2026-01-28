@@ -62,10 +62,11 @@
 /*  Common Classes */
 
 .title {
-   font-size: 1.25rem;
+   font-size: 1rem;
    color: gray; 
    font-weight: 400;
    font-family: Arial, Helvetica, sans-serif;
+   margin: 0.5rem;
 }
 .image {
    width: 50px;
@@ -79,6 +80,7 @@
    display: flex;
    align-items: center;
    gap: 1rem;
+   margin: 0.5rem;
 }
 .matches-list-item {
     display: flex;
@@ -95,7 +97,9 @@
     gap: 0.5rem;
     padding: 0.75rem;
     background-color: gray;
-    border-radius: 0.25rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .search-input {
@@ -119,4 +123,38 @@
     cursor: pointer;
     position: absolute;
     right: 1rem;
+    padding-right: 0.5rem;
 }
+
+.chat-list {
+    list-style: none;
+    gap: 1rem;
+    margin: 0.5rem;
+}
+
+.chat-list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* .chat-image {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%; */
+
+
+.chat-image-container {
+    width: 29px;
+    height: 29px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
+}
+
