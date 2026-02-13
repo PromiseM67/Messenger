@@ -10,8 +10,9 @@
 </head>
 <body>
     <section>
-        <h1 class="title matches">Matches</h1>
-        <div>
+        <!-- HOME VIEW -->
+        <div id="home-view">
+            <h1 class="title matches">Matches</h1>
             <ul class="matches-list">
                 <li class="matches-list-item">
                     <img class="image profile-image" src="" alt="">
@@ -28,8 +29,8 @@
                     <span>John</span>
                     <span>22</span>
                 </li>
-                
             </ul>
+            
             <section>
                 <div class="search-section-container">
                     <div class="search-section">
@@ -38,10 +39,11 @@
                     </div>
                 </div>
             </section>
+
             <section>
                 <h2 class="title chat">Chat</h2>
                 <ul class="chat-list">
-                    <li class="chat-list-item">
+                    <li class="chat-list-item" onclick="openChat('Dianne')">
                         <div class="chat-image-container">
                             <img class="image profile-image chat-image" src="" alt="">
                         </div>
@@ -49,7 +51,7 @@
                         <p class="chat-list-item-message">Hello</p>
                         <span class="chat-list-item-time">Monday</span>
                     </li>
-                    <li class="chat-list-item">
+                    <li class="chat-list-item" onclick="openChat('Ruwayne')">
                         <div class="chat-image-container">
                             <img class="image profile-image chat-image" src="" alt="">
                         </div>
@@ -57,7 +59,7 @@
                         <p class="chat-list-item-message">Hello</p>
                         <span class="chat-list-item-time">Monday</span>
                     </li>
-                    <li class="chat-list-item">
+                    <li class="chat-list-item" onclick="openChat('John')">
                         <div class="chat-image-container">
                             <img class="image profile-image chat-image" src="" alt="">
                         </div>
@@ -65,7 +67,7 @@
                         <p class="chat-list-item-message">Hello</p>
                         <span class="chat-list-item-time">Monday</span>
                     </li>
-                    <li class="chat-list-item">
+                    <li class="chat-list-item" onclick="openChat('Jonny')">
                         <div class="chat-image-container">
                             <img class="image profile-image chat-image" src="" alt="">
                         </div>
@@ -75,6 +77,39 @@
                     </li>
                 </ul>
             </section>
+        </div>
+
+        <!-- CHAT VIEW (Initially Hidden) -->
+        <div id="chat-view" class="hidden">
+            <header class="chat-header">
+                <button class="back-button" onclick="goHome()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+                </button>
+                <div class="chat-header-info">
+                    <img id="current-chat-image" class="image profile-image" src="" alt="">
+                    <span id="current-chat-name">User</span>
+                </div>
+            </header>
+            
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will appear here -->
+                <div class="message received">
+                    <p>Hey there! How are you?</p>
+                    <span class="time">10:00 AM</span>
+                </div>
+                <div class="message sent">
+                    <p>I'm doing great, thanks!</p>
+                    <span class="time">10:05 AM</span>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button class="send-button" onclick="sendMessage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
+                </button>
+            </div>
+        </div>
             <footer class="footer">
                 <nav class="footer-nav">
                     <ul>
@@ -93,7 +128,7 @@
                     </ul>
                 </nav>
             </footer>
-        </div>
+    <script src="jsscripts.js"></script>
     </section>
 </body>
 </html>
