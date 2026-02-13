@@ -1,5 +1,5 @@
 require('dotenv').config({ quiet: true }); //load environment variables from .env file
-
+const { Server } = require("socket.io");
 const express = require('express'); //import express
 const path = require('path'); //import path module
 const app = express(); //initialize express
@@ -16,5 +16,9 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 })
+
+
+
+
 
 
