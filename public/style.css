@@ -208,15 +208,15 @@
 }
 
 
-/* Utility Classes */
+/* Utility Classes
 .hidden {
     display: none !important;
-}
+} */
 
 /* Chat View Styles */
 #chat-view {
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: var(--lighterBackgroundColour);
     position: fixed;
@@ -336,4 +336,12 @@
 .send-button svg {
     fill: white;
     margin-left: 2px; /* Visual centering adjustment */
+}
+
+#home-view.hidden {
+    display: none;
+}
+
+#home-view.hidden ~ #chat-view {
+    display: flex;
 }

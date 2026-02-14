@@ -1,7 +1,7 @@
 // Simple navigation functions
 function openChat(userName) {
-    document.getElementById('home-view').classList.add('hidden');
-    document.getElementById('chat-view').classList.remove('hidden');
+    document.getElementById('home-view').classList.toggle('hidden');
+    // document.getElementById('chat-view').classList.remove('hidden');
     document.getElementById('current-chat-name').innerText = userName;
     
     // Auto-scroll to bottom of chat
@@ -10,8 +10,8 @@ function openChat(userName) {
 }
 
 function goHome() {
-    document.getElementById('chat-view').classList.add('hidden');
-    document.getElementById('home-view').classList.remove('hidden');
+    // document.getElementById('chat-view').classList.add('hidden');
+    document.getElementById('home-view').classList.toggle('hidden');
 }
 
 // Sending messages
