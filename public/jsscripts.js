@@ -54,3 +54,46 @@ document.getElementById('message-input').addEventListener('keypress', function (
         sendMessage();
     }
 });
+
+async function sendMessage() {
+    const input = document.getElementById('message-input');
+    const messageText = input.value.trim();
+
+    await fetch('/send-message', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            message: messageText,
+        }),
+    });
+
+    if (messageText !== "") {
+        const messagesContainer = document.getElementById('chat-messages');
+
+        // Create message bubble
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', 'sent');
+
+        const textP = document.createElement('p');
+        textP.innerText = messageText;
+
+        const timeSpan = document.createElement('span');
+        timeSpan.classList.add('time');
+        const now = new Date();
+        timeSpan.innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        messageDiv.appendChild(textP);
+        messageDiv.appendChild(timeSpan);
+
+        // Add to chat
+        messagesContainer.appendChild(messageDiv);
+
+        // Scroll to bottom
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+        // Clear input
+        input.value = "";
+    }
+}
